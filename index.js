@@ -37,6 +37,7 @@ console.log(random)
     Create a variable called "me" and assign to it an object containing the following information: name = your name, surname = your surname, age = your age.
 */
 
+
 let me = {
   name: "Wako",
   surname: "Anindo",
@@ -49,12 +50,13 @@ console.log(me)
 */
 
 delete me.age
+console.log(me)
 
 /* Ex.F 
    Programmatically add to the object me an array called "skills", containing the programming languages you know right now.
 */
 
-let skills = ["JavaScript", "Python", "SQL"]
+let skills = ["JavaScript", "Python","SQL"]
 me.push(skills)
 console.log(me)
 
@@ -62,7 +64,7 @@ console.log(me)
    Programmatically remove the last skill from the "skills" array inside the "me" object.
 */
 
-me.skills.pop()
+me.pop()
 console.log(me)
 
 // JS Functions
