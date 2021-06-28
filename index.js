@@ -137,7 +137,7 @@ let isThisAnEmail = function(mail)
    Write a function called "whatDayIsIt" that should return the current day of the week.
 */
 
-let whatDayIsIt = getdate()
+let whatDayIsIt = getDay()
 
 /* Ex.8
     Write a function called "rollTheDices" which receives a number as a parameter.
@@ -149,6 +149,7 @@ let whatDayIsIt = getdate()
         values: [3, 3, 4]
     }
 */
+
 
 /* Ex.9
    Write a function called "howManyDays" which receives a date as a parameter and should return the number of days passed since that date.
@@ -226,6 +227,10 @@ let whatDayIsIt = getdate()
 /* Ex.23
   Create a function called "isItPrime" that receives a number as a parameter and returns true if the given number is a prime number.
 */
+
+function isItPrime(){
+    return true
+}
 
 /* This movies array is used throughout the exercises. Please don't change it :)  */
 const movies = [
