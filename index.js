@@ -355,10 +355,28 @@ function onlyTheTitles() {
 /* Ex.15
    Write a function called "onlyInThisMillennium" which returns only the movies produced in this millennium.
 */
+function onlyInThisMillennium(){
+  let arr = []
+  for (let i = 0; i < movies.length; i++){
+    let movie = movies[i]
+    if (movie.year > 1999) {
+      arr.push(movies)
+    }
+    return arr
+  }
+}
 
 /* Ex.16 
     Write a function called "getMovieById" which receives an id as a parameter and returns the movie with the given id.
 */
+function getMovieById(id) {
+  for(let i = 0; i < movies.length; i++){
+      if (movies[i].imdbID === id)
+          return movies[i]
+  }
+
+  return {} //returns result as an object
+}
 
 /* Ex.17
     Write a function called "sumAllTheYears" which returns the sum of all the years in which the movies provided have been produced.
