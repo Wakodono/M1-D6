@@ -101,36 +101,40 @@ console.log(splitMe("These challenges are getting easier"))
     Write a function called "deleteOne" which receives a string and a boolean as parameters. If the boolean value is true it should return the string without the first letter, otherwise it should remove the last one from it.
 */
 
-const deleteOne = function(_string, result){
-  _string = "Winning"
-  result = true
-  if(result === true){
-    return _string.slice[0] 
-  }else{_string.length -1}
+const deleteOne = function(str, result){
+  if (result === true) {
+    return str.substring(1)
+  } else {
+    return substring(0, str.length - 1)
+  }
 }
+
+console.log(deleteOne(Sparta, true))
 
 /* Ex.5
    Write a function called "onlyLetters" which receives a string as a parameter and returns it removing all the digits.
    Ex.: onlyLetters("I have 4 dogs")  => returns "I have  dogs"
 */
 
-function onlyLetters(){
-  onlyLetters.replace(/[0-9]/g, " ")
-  console.log(onlyLetters)
+function onlyLetters(str) {
+  let final = ""
+  for(let i = 0; i < str.length; i ++){
+      let element = str[i]
+      if (isNaN(element))
+          final += element
+  }
+
+  return final
 }
+console.log(onlyLetters("I'm Nick Cannon and I love my 23 kids."))
 
 /* Ex.6 
    Write a function called "isThisAnEmail" which receives a string as a parameter and returns true if the string is a valid email address.
 */
 
-let isThisAnEmail = function(mail) 
+let isThisAnEmail = function(str) 
 {
- if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(myForm.emailAddr.value))
-  {
-    return (true)
-  }
-    alert("You have entered an invalid email address!")
-    return (false)
+ return /^S+@\S+\.\S+$/.test()
 }
 
 
