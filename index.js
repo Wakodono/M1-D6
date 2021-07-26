@@ -142,7 +142,10 @@ let isThisAnEmail = function(str)
    Write a function called "whatDayIsIt" that should return the current day of the week.
 */
 
-let whatDayIsIt = getdate()
+function whatDayIsIt(){
+  let days = [ "Sun", "Mon", "Tue","Wed", "Thu", "Fri", "Sat"]
+  return days[(new Date()).getDay()]
+}
 
 /* Ex.8
     Write a function called "rollTheDices" which receives a number as a parameter.
@@ -155,14 +158,40 @@ let whatDayIsIt = getdate()
     }
 */
 
+function rollTheDices(n){
+  let outcome = {
+      sum: 0,
+      values: []
+  }
+
+  for (let i = 0; i < n; i ++){
+      let diceRoll = dice()
+      outcome.sum += diceRoll
+      outcome.values.push(diceRoll)
+  }
+
+  return outcome
+}
+
+
 /* Ex.9
    Write a function called "howManyDays" which receives a date as a parameter and should return the number of days passed since that date.
 */
 
+function howManyDays(selectedDate) {
+  let today = new Date()
+  let difference = today - selectedDate
+  return difference / (1000 * 60 * 60 * 24)
+}
+
 /* Ex.10
    Write a function called "isTodayMyBirthday" which should return true if today's your birthday, false otherwise.
 */
-
+function isTodayMyBirthday() {
+  let today = new Date()
+  let bday = new Date(1991, 24, 12) 
+  return (today.getDay() === bday.getDay() && today.getMonth() === bday.getMonth())
+}
 // JS Arrays // Objs
 // NOTE: movies array is defined at the end of this file!
 
