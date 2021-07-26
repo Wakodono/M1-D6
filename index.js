@@ -92,9 +92,10 @@ console.log(whoIsBigger(20,10))
     Ex. splitMe("I love coding") => returns ["I", "Love", "Coding"]
 */
 
-let message = "These challenges are getting easier. Yay"
-let splitMe = message.split(' ')
-console.log(splitMe)
+function splitMe(str) {
+  return str.split(" ")
+}
+console.log(splitMe("These challenges are getting easier"))
 
 /* Ex.4
     Write a function called "deleteOne" which receives a string and a boolean as parameters. If the boolean value is true it should return the string without the first letter, otherwise it should remove the last one from it.
