@@ -102,11 +102,10 @@ console.log(splitMe)
     Write a function called "deleteOne" which receives a string and a boolean as parameters. If the boolean value is true it should return the string without the first letter, otherwise it should remove the last one from it.
 */
 
-const deleteOne = function(_string, result){
-  _string = "Winning"
-  result = true
-  if(result === true){
-    return _string.slice[0] 
+
+const deleteOne = function(_str, b){
+  if(b === true){
+    return _str.slice[0] 
   }else{_string.length -1}
 }
 
