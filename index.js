@@ -463,3 +463,10 @@ function removeIndex(n) {
 /* Ex.23
   Create a function called "isItPrime" that receives a number as a parameter and returns true if the given number is a prime number.
 */
+function isItPrime (n) {
+  for (let i = 2; i < n;) {
+      if (n % 2 === 0)
+        return false    
+  }
+  return true
+}
