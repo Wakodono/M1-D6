@@ -330,8 +330,8 @@ function olderMovie(){
   let oldest = {year: 2100}
   for (let i = 0; i < movies.length; i++) {
     let movie = movies[i];
-    let currentYear = parseInt(movies.year)
-    if (currentYear < oldest.year)
+    let currentYear = parseInt(movies.Year)
+    if (currentYear < oldest.Year)
     oldest = movie
   }
   return oldest
@@ -352,7 +352,7 @@ function onlyTheTitles() {
   let arr = []
   for (let i = 0; i < movies.length; i++) {
     let movie = movies[i];
-    arr.push(movies.title)
+    arr.push(movies.Title)
   }
   return arr
 }
@@ -364,7 +364,7 @@ function onlyInThisMillennium(){
   let arr = []
   for (let i = 0; i < movies.length; i++){
     let movie = movies[i]
-    if (movie.year > 1999) {
+    if (parseInt(movies.Year) > 1999) {
       arr.push(movies)
     }
     return arr
@@ -375,31 +375,70 @@ function onlyInThisMillennium(){
     Write a function called "getMovieById" which receives an id as a parameter and returns the movie with the given id.
 */
 function getMovieById(id) {
+  let movie = movies[i]
   for(let i = 0; i < movies.length; i++){
       if (movies[i].imdbID === id)
           return movies[i]
   }
 
-  return {} //returns result as an object
+  return {} //returns result as an empty object if current index doesn't match id
 }
 
 /* Ex.17
     Write a function called "sumAllTheYears" which returns the sum of all the years in which the movies provided have been produced.
 */
+function sumAllTheYears() {
+  let element = 0
+  for(let i = 0; i < movies.length; i++){
+        element += parseInt(movies[i].Year)
+  }
+  return element
+}
 
 /* Ex.18
     Write a function called "searchByTitle" which receives a string as a parameter and returns all the movies which contain that string in the title.
 */
+function searchByTitle (keyword) {
+  let element = movies[i]
+  for (let i = 0; i < array.length; i++) {
+    if (movies[i].Title.indexOf(keyword) !== -1) {
+      element.push(movies[i])
+    }
+  }
+}
 
 /* Ex.19
     Write a function called "searchAndDivide" which receives a string as a parameter and returns an object;
     this object should contain an array called "match", made by all the movies which contain the given string in the title,
     and another array "unmatch" with all the remaining ones.
 */
+function searchAndDivide (str) {
+  let element = {
+    match: [],
+    unmatch: [],
+  }
+  for (let i = 0; i < movies.length; i++) {
+    if (movies[i].Title.match.indexOf(str) !== -1) {
+      element.match.push(movies[i])
+    } else {
+      element.unmatch.push(movies[i])
+    }
+    return element
+  }
+}
 
 /* Ex.20
    Write a function called "removeIndex" which receives a number as a parameter and returns the movies array without the element in the given position.
 */
+function removeIndex(n) {
+  let element = [];
+  for (let i = 0; i < movies.length; i++) {
+    if (n === i)
+      continue    //This statement takes the current iteration out of the array and continues the loop. i.e. If n don't add it to loop 
+
+      element.push(movies[i])
+  }
+}
 
 // [EXTRAS] JS Advanced
 
